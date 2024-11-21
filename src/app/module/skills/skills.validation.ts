@@ -17,7 +17,7 @@ export const updateSkillValidationSchema = z.object({
     level: z
       .number()
       .min(1, "Level must be at least 1")
-      .max(5, "Level must be at most 5")
+      .max(100, "Level must be at most 5")
       .optional(),
     img: z.string().url("Image URL must be valid").optional(),
   }),

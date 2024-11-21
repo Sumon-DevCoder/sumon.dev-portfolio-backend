@@ -18,6 +18,9 @@ router.post(
 // get all
 router.get("/", ProjectControllers.getAllProject);
 
+// get single
+router.get("/:id", ProjectControllers.getSingleProject);
+
 // update
 router.put(
   "/:id",

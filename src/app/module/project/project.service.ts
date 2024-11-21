@@ -44,6 +44,18 @@ const getAllProjectFromDB = async (query: Record<string, unknown>) => {
   };
 };
 
+// get single
+const getSingleProjectIntoDB = async (_id: string) => {
+  // Skills checking
+  const result = await Project.findById(_id);
+
+  if (!result) {
+    throw new AppError(httpStatus.CONFLICT, "Project does not Exists!");
+  }
+
+  return result;
+};
+
 // update
 const updateProjectIntoDB = async (_id: string, payload: Partial<TProject>) => {
   // Project checking
@@ -77,4 +89,5 @@ export const ProjectServices = {
   getAllProjectFromDB,
   updateProjectIntoDB,
   deleteProjectIntoDB,
+  getSingleProjectIntoDB,
 };

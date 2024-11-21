@@ -28,6 +28,18 @@ const getAllSkills = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
+// get single
+const getSingleSkills = catchAsync(async (req: Request, res: Response) => {
+  const result = await SkillsServices.getSingleSkillsIntoDB(req.params.id);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Skills retrieved successfully",
+    data: result,
+  });
+});
+
 // update
 const updateSkills = catchAsync(async (req: Request, res: Response) => {
   const result = await SkillsServices.updateSkillsIntoDB(
@@ -60,4 +72,5 @@ export const SkillsControllers = {
   updateSkills,
   createSkills,
   getAllSkills,
+  getSingleSkills,
 };

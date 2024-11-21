@@ -41,6 +41,18 @@ const getAllSkillsFromDB = async (query: Record<string, unknown>) => {
   };
 };
 
+// get single
+const getSingleSkillsIntoDB = async (_id: string) => {
+  // Skills checking
+  const result = await Skills.findById(_id);
+
+  if (!result) {
+    throw new AppError(httpStatus.CONFLICT, "Skills does not Exists!");
+  }
+
+  return result;
+};
+
 // update
 const updateSkillsIntoDB = async (_id: string, payload: Partial<TSkills>) => {
   // Skills checking
@@ -73,5 +85,6 @@ export const SkillsServices = {
   createSkillsIntoDB,
   getAllSkillsFromDB,
   updateSkillsIntoDB,
+  getSingleSkillsIntoDB,
   deleteSkillsIntoDB,
 };

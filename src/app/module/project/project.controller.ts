@@ -2,6 +2,7 @@ import httpStatus from "http-status-codes";
 import { Request, Response } from "express";
 import catchAsync from "../../utiils/catchAsync";
 import sendResponse from "../../utiils/sendResponse";
+import { ProjectServices } from "./project.service";
 
 // create
 const createProject = catchAsync(async (req: Request, res: Response) => {
@@ -18,6 +19,18 @@ const createProject = catchAsync(async (req: Request, res: Response) => {
 // get all
 const getAllProject = catchAsync(async (req: Request, res: Response) => {
   const result = await ProjectServices.getAllProjectFromDB(req.query);
+
+  sendResponse(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: "Project retrieved successfully",
+    data: result,
+  });
+});
+
+// get single
+const getSingleProject = catchAsync(async (req: Request, res: Response) => {
+  const result = await ProjectServices.getSingleProjectIntoDB(req.params.id);
 
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -59,4 +72,5 @@ export const ProjectControllers = {
   updateProject,
   createProject,
   getAllProject,
+  getSingleProject,
 };

@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response } from "express";
-import httpStatus from "http-status-codes";
+import httpStatus from "http-status-codes-codes";
 
 // Make sure the middleware function returns void
 const notFound = (req: Request, res: Response, next: NextFunction): void => {

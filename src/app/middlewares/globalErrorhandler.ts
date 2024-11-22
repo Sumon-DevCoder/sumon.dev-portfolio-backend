@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
-
 import { ErrorRequestHandler } from "express";
 import { ZodError } from "zod";
 import config from "../config";
@@ -60,14 +58,17 @@ const globalErrorHandler: ErrorRequestHandler = (err, req, res, next) => {
     ];
   }
 
-  //ultimate return
-  return res.status(statusCode).json({
+  // Send response without returning it
+  res.status(statusCode).json({
     success: false,
     message,
     errorSources,
     err,
     stack: config.NODE_ENV === "development" ? err?.stack : null,
   });
+
+  // No return value here, Express handles the flow
+  return; // This explicitly returns `undefined`, which is of type `void`
 };
 
 export default globalErrorHandler;

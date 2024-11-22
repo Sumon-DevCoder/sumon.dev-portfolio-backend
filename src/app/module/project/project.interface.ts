@@ -8,6 +8,6 @@ export type TProject = {
   date: string;
   category: string;
   type: string;
-  Challenges: string;
+  challenges: string;
   features: string;
 };

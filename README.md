@@ -1,10 +1,12 @@
-# **Meeting Room Booking - Backend**
+# **My Portfolio Backend**
 
-A web application for managing room bookings in co-working spaces, featuring user and slot management. This application allows administrators to create and manage meeting rooms and available time slots, while users can easily book rooms based on their preferred times and receive real-time availability updates. The system also includes robust validation and error handling to ensure smooth interactions throughout the booking process.
+A backend system designed to power a modern and dynamic portfolio website. Built with a robust MERN (MongoDB, Express.js, React, Node.js) stack, this backend provides seamless CRUD operations for managing various portfolio sections such as projects, experiences, skills, and blogs. The system is integrated with Next.js for efficient rendering and Redux for state management, ensuring a smooth and dynamic full-stack experience.
 
 ## **Live Demo**
 
-[Live Link](https://meeting-room-booking-server-zeta.vercel.app/)
+[Live Application](https://meeting-room-booking-server-zeta.vercel.app/)
+
+---
 
 ## **Table of Contents**
 
@@ -14,47 +16,66 @@ A web application for managing room bookings in co-working spaces, featuring use
 - [Installation](#installation)
 - [Usage](#usage)
 
+---
+
 ## **Project Overview**
 
-This project is a web application that allows users to book meeting rooms system with specific time slots. Admins can manage room availability, view bookings, and handle cancellations. The app provides a smooth and user-friendly experience for booking and managing meeting spaces.
+The **My Portfolio Backend** serves as the backbone of a professional portfolio website, offering a secure and scalable system for managing content. With this backend, users (admins) can easily create, update, and delete portfolio sections, such as projects, skills, experiences, and blog posts. The system utilizes modern web technologies, ensuring performance, maintainability, and seamless integration with the frontend.
 
-## **Features**
+The backend is designed to be modular and scalable, making it easy to expand as the portfolio grows, and it allows for easy integration with a dynamic Next.js frontend. The system is secure, optimized, and built with best practices in mind.
 
-- **Admin Dashboard:**
+---
 
-  - Create, update, and delete meeting rooms.
-  - Manage room details such as name, room number, floor number, capacity, price per slot, and available amenities.
-  - Create and manage time slots for each room with date, start time, and end time.
+## **Key Features**
 
-- **User Booking:**
+### **1. Admin Dashboard**
 
-  - Browse available meeting rooms and time slots.
-  - Create bookings by selecting preferred rooms and time slots.
-  - Automatically calculated total amount based on selected slots and pricing.
-  - Real-time feedback on room and slot availability.
+- **Manage Portfolio Sections**:
+  - Create, update, and delete sections like projects, experiences, skills, and blogs.
+  - Provide detailed metadata for each section (e.g., project descriptions, skills, or work experiences).
+- **File Upload**:
+  - Easily upload images or media files to showcase projects and skills.
 
-- **Robust Validation:**
-  - Informative error messages for booking conflicts and validation errors.
+### **2. Secure API Endpoints**
 
-## Technology Stack
+- **CRUD Operations**:
+  - Secure API routes for creating, reading, updating, and deleting portfolio sections.
+- **Authentication**:
+  - JWT-based authentication to ensure secure admin access.
+
+### **3. Real-time Data Updates**
+
+- **Dynamic Content**:
+  - Changes to portfolio content are instantly reflected on the frontend.
+
+### **4. Scalable Design**
+
+- Built with scalability in mind to handle expanding sections and future feature additions.
+
+---
+
+## **Technology Stack**
 
 - **Programming Language:** TypeScript
-- **Web Framework:** Express.js
+- **Backend Framework:** Express.js
+- **Frontend Integration:** Next.js
 - **Database:** MongoDB
 - **ODM:** Mongoose
+- **State Management:** Redux (for frontend state handling)
 
-## Installation
+---
 
-1. **Clone the repository**:
+## **Installation**
 
-   ```bash
-   git clone https://github.com/Sumon-DevCoder/meeting-room-booking-server.git
-   ```
+### **1. Clone the Repository**
+
+````bash
+git clone https://github.com/Sumon-DevCoder/sumon.dev-portfolio-backend.git
 
 2. **Navigate into the project directory**:
 
    ```bash
-   cd Meeting Room Booking - Backend
+   cd sumon.dev-portfolio-backend
 
    ```
 
@@ -71,23 +92,17 @@ This project is a web application that allows users to book meeting rooms system
    PORT=5000
    BCRYPT_SALT_ROUND=12
    NODE_ENV=development
-   # payment credential (REDACTED)
-   STORE_ID="aamarpaytest"
-   SIGNETURE_KEY="dbb74894e82415a2f7ff0ec3a97e4183"
-   PAYMENT_URL="https://sandbox.aamarpay.com/jsonpost.php"
-   PAYMENT_VERIFY_URL="https://sandbox.aamarpay.com/api/v1/trxcheck/request.php"
    # admin credentials (REDACTED)
-   admin_email=****\*\*\*****
-   admin_password=****\*\*\*****
-   admin_mobile_number=****\*\*\*****
-   admin_image=****\*\*\*****
+   admin_email=mustafizurrahmansumon24@gmail.com
+   admin_password=sumon.devConfig@24
+   admin_mobile_number=01962-878499
    # jwt credentials (REDACTED)
    JWT_ACCESS_SECRET=secret
    JWT_ACCESS_EXPIRES_iN=365d
    JWT_REFRESH_SECRET=refreshscret
    JWT_REFRESH_EXPIRES_IN=365d
 
- 
+
    BACKEND_LIVE_URL=https://meeting-room-booking-server-zeta.vercel.app/
    ```
 
@@ -101,3 +116,4 @@ This project is a web application that allows users to book meeting rooms system
 - **For Users:**
   - Browse the available meeting rooms and select desired time slots for booking.
   - Fill in the booking form and receive confirmation of your reservation.
+````

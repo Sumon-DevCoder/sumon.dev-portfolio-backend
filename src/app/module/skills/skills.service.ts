@@ -1,4 +1,4 @@
-import httpStatus from "http-status-codes";
+import httpStatus from "http-status-codes-codes";
 import AppError from "../../error/AppError";
 import QueryBuilder from "../../builder/QueryBuilder";
 import { TSkills } from "./skills.interface";

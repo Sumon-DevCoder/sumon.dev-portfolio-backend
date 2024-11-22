@@ -1,4 +1,4 @@
-import httpStatus from "http-status";
+import httpStatus from "http-status-codes";
 import { TUser } from "./user.interface";
 import AppError from "../../error/AppError";
 import QueryBuilder from "../../builder/QueryBuilder";

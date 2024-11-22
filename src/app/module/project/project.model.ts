@@ -9,6 +9,11 @@ const projectSchema = new Schema<TProject>(
     clientCode: { type: String, required: true },
     serverCode: { type: String, required: true },
     liveLink: { type: String, required: true },
+    date: { type: String, required: true },
+    category: { type: String, required: true },
+    type: { type: String, required: true },
+    Challenges: { type: String, required: true },
+    features: { type: String, required: true },
   },
   { timestamps: true }
 );

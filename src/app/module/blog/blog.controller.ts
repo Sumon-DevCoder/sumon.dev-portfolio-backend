@@ -30,6 +30,7 @@ const getAllBlog = catchAsync(async (req: Request, res: Response) => {
 
 // get single
 const getSingleBlog = catchAsync(async (req: Request, res: Response) => {
+  console.log(req.params.id);
   const result = await BlogServices.getSingleBlogIntoDB(req.params.id);
 
   sendResponse(res, {

@@ -58,6 +58,7 @@ const getSingleProjectIntoDB = async (_id: string) => {
 
 // update
 const updateProjectIntoDB = async (_id: string, payload: Partial<TProject>) => {
+  console.log(_id);
   // Project checking
   const isProjectExists = await Project.findById(_id);
   if (!isProjectExists) {

@@ -1,7 +1,7 @@
 import bcrypt from "bcrypt";
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import httpStatus from "http-status";
+import httpStatus from "http-status-codes";
 import AppError from "../../error/AppError";
 import { User } from "../user/user.model";
 import { TUser } from "../user/user.interface";

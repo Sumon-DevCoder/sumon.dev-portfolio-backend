@@ -10,6 +10,11 @@ export const createProjectValidationSchema = z.object({
     clientCode: z.string().url("Client code must be a valid URL"),
     serverCode: z.string().url("Server code must be a valid URL"),
     liveLink: z.string().url("Live link must be a valid URL"),
+    date: z.string(),
+    category: z.string(),
+    type: z.string(),
+    Challenges: z.string(),
+    features: z.string(),
   }),
 });
 
@@ -24,6 +29,11 @@ export const updateProjectValidationSchema = z.object({
     clientCode: z.string().url("Client code must be a valid URL").optional(),
     serverCode: z.string().url("Server code must be a valid URL").optional(),
     liveLink: z.string().url("Live link must be a valid URL").optional(),
+    date: z.string().optional(),
+    category: z.string().optional(),
+    type: z.string().optional(),
+    Challenges: z.string().optional(),
+    features: z.string().optional(),
   }),
 });
 
